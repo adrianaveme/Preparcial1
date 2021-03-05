@@ -24,35 +24,9 @@ public class Record {
      * Setters and getters
      */
 
-    public double getSpeed() {
-        return speed;
-    }
-
-    public void setSpeed(double speed) {
-        this.speed = speed;
-    }
-
-    public int getPower() {
-        return power;
-    }
-
-    public void setPower(int power) {
-        this.power = power;
-    }
-
-    public Instant getTime() {
-        return time;
-    }
-
-    public void setTime(Instant time) {
-        this.time = time;
-    }
 
     public int getBeats() {
         return this.beats;
     }
 
-    public void setBeats(int beats) {
-        this.beats = beats;
-    }
 }

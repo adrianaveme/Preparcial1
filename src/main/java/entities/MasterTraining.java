@@ -18,46 +18,6 @@ public class MasterTraining {
     }
 
     /**
-     * Setters and getters
-     */
-
-    public static int getUndefined() {
-        return undefined;
-    }
-
-    public List<Plan> getPlans() {
-        return plans;
-    }
-
-    public void setPlans(List<Plan> plans) {
-        this.plans = plans;
-    }
-
-    public List<Trainer> getTrainers() {
-        return trainers;
-    }
-
-    public void setTrainers(List<Trainer> trainers) {
-        this.trainers = trainers;
-    }
-
-    public List<Cyclist> getCyclist() {
-        return cyclist;
-    }
-
-    public void setCyclist(List<Cyclist> cyclist) {
-        this.cyclist = cyclist;
-    }
-
-    public Workout getWorkouts() {
-        return workouts;
-    }
-
-    public void setWorkouts(Workout workouts) {
-        this.workouts = workouts;
-    }
-
-    /**
      * Determina para un plan específico el rendimiento del corazón del ciclista.
      * Si el corazón presenta latidos irregulares, crea un nuevo plan de tipo “Heart Care” para dicho ciclista.
      *Si el promedio de beats es menor a 90 o mayor a 160 se considera un ritmo irregular.

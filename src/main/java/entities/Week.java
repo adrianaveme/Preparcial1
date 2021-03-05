@@ -47,53 +47,7 @@ public class Week {
             }
         }
 
-        return this.sessions.size() == 0  ? 0 : sab /this.sessions.size();
+        return this.sessions.size() == 0 ? 0 : sab /this.sessions.size();
     }
-
-    /**
-     * Setters and getters
-     */
-
-    public int getNumber() {
-        return number;
-    }
-
-    public void setNumber(int number) {
-        this.number = number;
-    }
-
-    public Duration getRideTime() {
-        return rideTime;
-    }
-
-    public void setRideTime(Duration rideTime) {
-        this.rideTime = rideTime;
-    }
-
-    public String getObjective() {
-        return objective;
-    }
-
-    public void setObjective(String objective) {
-        this.objective = objective;
-    }
-
-    public Plan getPlan() {
-        return plan;
-    }
-
-    public void setPlan(Plan plan) {
-        this.plan = plan;
-    }
-
-    public List<Session> getSessions() {
-        return sessions;
-    }
-
-    public void setSessions(List<Session> sessions) {
-        this.sessions = sessions;
-    }
-
-
 
 }
