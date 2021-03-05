@@ -36,6 +36,20 @@ public class Week {
         this.plan = plan;
     }
 
+    public double averageBeats(){
+
+        double sab =0;
+
+        for (Session s: this.sessions){
+            double sessionAverageBeats = s.averageBeats();
+            if (sessionAverageBeats != 0){
+                sab += s.averageBeats();
+            }
+        }
+
+        return this.sessions.size() == 0  ? 0 : sab /this.sessions.size();
+    }
+
     /**
      * Setters and getters
      */

@@ -11,7 +11,7 @@ import java.util.List;
 public class Plan {
 
     private Date date;
-    private char type;
+    private String type;
     private int level;
     private boolean active;
     private Date [] start;
@@ -35,108 +35,13 @@ public class Plan {
 
     /**
      *
-     * constructor clase plan DISEÑO III
+     * @param type 'Heart Care Plan'
+     * @param cyclist
      */
-
-    public Plan(char type, Cyclist cyclist) {
+    public Plan(String type, Cyclist cyclist) {
         this.type = type;
         this.cyclist = cyclist;
     }
-
-
-    public Date getDate() {
-        return date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
-    }
-
-    public void setType(char type) {
-        this.type = type;
-    }
-
-    public int getLevel() {
-        return level;
-    }
-
-    public void setLevel(int level) {
-        this.level = level;
-    }
-
-    public boolean isActive() {
-        return active;
-    }
-
-    public void setActive(boolean active) {
-        this.active = active;
-    }
-
-    public Date[] getStart() {
-        return start;
-    }
-
-    public void setStart(Date[] start) {
-        this.start = start;
-    }
-
-    public Date[] getEnd() {
-        return end;
-    }
-
-    public void setEnd(Date[] end) {
-        this.end = end;
-    }
-
-    public Trainer getTrainer() {
-        return trainer;
-    }
-
-    public void setTrainer(Trainer trainer) {
-        this.trainer = trainer;
-    }
-
-    public Cyclist getCyclist() {
-        return cyclist;
-    }
-
-    public void setCyclist(Cyclist cyclist) {
-        this.cyclist = cyclist;
-    }
-
-    public List<ProgressLog> getProgress() {
-        return progress;
-    }
-
-    public void setProgress(List<ProgressLog> progress) {
-        this.progress = progress;
-    }
-
-    public static int getMinBeats() {
-        return MIN_BEATS;
-    }
-
-    public static int getMaxBeats() {
-        return MAX_BEATS;
-    }
-
-    public void setNumber(long number) {
-        this.number = number;
-    }
-
-    public List<Week> getWeeks() {
-        return weeks;
-    }
-
-    public void setWeeks(List<Week> weeks) {
-        this.weeks = weeks;
-    }
-
-    /**
-     * Setters and getters
-     */
-
-
 
     public void addWeek(Week week) {
         this.weeks.add(week);
@@ -146,23 +51,19 @@ public class Plan {
         return number;
     }
 
-    public char getType() {
-        return type;
+
+    public Cyclist getCyclist() {
+        return cyclist;
     }
 
-    public Plan(List<Week> weeks) {
-    }
-
-    public void HeartCarePlan(){
-        Plan plan = new Plan(weeks);
-
-        //weeks.add(new Week(4, 3600, weeks.getSession()));
-
-    }
-
-    public void  findPlan(){
 
 
+    public double averageBeats(){
+
+        double wab = 0;
+        for (Week w: this.weeks)
+            wab += w.averageBeats();
+        return this.weeks.size() ==0 ? 0 : wab / this.weeks.size();
     }
 
 }

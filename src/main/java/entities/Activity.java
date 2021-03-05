@@ -96,4 +96,12 @@ public class Activity {
     public void setRecords(List<Record> records) {
         this.records = records;
     }
+
+    public double averageBeats(){
+        double rab = 0;
+        for (Record r: this.records)
+            rab += r.getBeats();
+
+        return this.records.size() == 0 ? 0 :  rab /this.records.size();
+    }
 }

@@ -10,9 +10,6 @@ public class Session {
     private Week week;
     private Activity activity;
 
-    public void assignActivity(Activity activity) {
-        this.activity = activity;
-    }
 
     public char getType() {
         return type;
@@ -65,5 +62,16 @@ public class Session {
 
     public Date date(){
         return null;
+    }
+
+    public void assignActivity(Activity activity)
+    {
+        this.activity = activity;
+    }
+    public double average;
+
+    public double averageBeats() {
+        double aab = this.activity == null ? 0 : this.activity.averageBeats();
+        return aab;
     }
 }

@@ -2,6 +2,12 @@ package entities;
 
 import java.time.Instant;
 
+
+/**
+ * Esta clase representa un resgistro del atleta.
+ * beats no puede ser nunca menor a 30
+ */
+
 public class Record {
 
     private double speed;
@@ -43,7 +49,7 @@ public class Record {
     }
 
     public int getBeats() {
-        return beats;
+        return this.beats;
     }
 
     public void setBeats(int beats) {
