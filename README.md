@@ -47,4 +47,7 @@ Diseñe el constructor de la clase Plan que recibe como atributos el tipo de pla
 2. Puede acceder a todos los recursos que considere necesarios, excepto pedirle ayuda a un tercero.
 3. El examen se calificará contra un conjunto de pruebas que no esta adjunto al parcial, sin embargo el mismo cuenta con un conjunto de pruebas modelo, piense en casos que pueden no estar cubiertos en el mismo.
 
+![](Memoria.png)
+
+
  
